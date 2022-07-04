@@ -5,52 +5,15 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="10dp">
-
-    <EditText
-        android:id="@+id/scoreboard"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:autofillHints=""
-        android:focusable="false"
-        android:inputType="text"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"
-        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="186dp" />
-
-    <EditText
-        android:id="@+id/androChoiceBox"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:autofillHints=""
-        android:focusable="false"
-        android:hint="@string/my_choice"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+    android:padding="10dp"
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/playerChoiceBox"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="20dp"
         android:autofillHints=""
         android:focusable="false"
         android:hint="@string/your_choice"
@@ -58,60 +21,83 @@
         android:longClickable="false"
         android:textAlignment="center"
         android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/androChoiceBox"
+        app:layout_constraintTop_toBottomOf="@+id/scoreboard"
         tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="514dp" />
+    <EditText
+        android:id="@+id/scoreboard"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="400dp"
+        android:autofillHints=""
+        android:focusable="false"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/androChoiceBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:autofillHints=""
+        android:focusable="false"
+        android:hint="@string/my_choice"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toStartOf="@+id/playerChoiceBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreboard"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btn_rock"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="150dp"
         android:longClickable="false"
         android:text="@string/btn_rock"
         android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_paper"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_paper"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
         android:longClickable="false"
         android:text="@string/btn_paper"
         android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_scissors"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_rock"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintStart_toEndOf="@+id/btn_rock" />
 
     <Button
         android:id="@+id/btn_scissors"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="150dp"
         android:text="@string/btn_scissors"
         android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_paper"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="365dp" />
+        app:layout_constraintStart_toEndOf="@+id/btn_paper" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
