@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             playerScore += 1
         }
         fun displayScore() {
-            binding.scoreboard.setText("PC $androScore - Player $playerScore")
+            binding.scoreboard.setText("Android $androScore - Player $playerScore")
         }
         displayScore()
 
