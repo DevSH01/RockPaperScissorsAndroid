@@ -100,4 +100,36 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_paper" />
 
+    <EditText
+        android:id="@+id/attemptsTaken"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:longClickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/scoreboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/resultBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/androChoiceBox"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no"
+        android:focusable="false"
+        android:longClickable="false"
+        android:textAlignment="center"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

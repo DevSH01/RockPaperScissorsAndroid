@@ -3,7 +3,6 @@ package com.example.rockpaperscissors
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.rockpaperscissors.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -44,30 +43,45 @@ class MainActivity : AppCompatActivity() {
         }
         displayScore()
 
+        //Attempts counter
+        var attemptsCount = 0
+        fun attemptsCountUp() {
+            attemptsCount += 1
+        }
+        fun displayAttemptsCount() {
+            binding.attemptsTaken.setText("Attempts: $attemptsCount")
+        }
+        displayAttemptsCount()
+
         //Result
+        fun resultMessage(message: String) {
+            binding.resultBox.setText(message)
+        }
         fun displayResult() {
             if (androChoice == playerChoice) {
-                Toast.makeText(applicationContext, "Draw!", Toast.LENGTH_SHORT).show()
+                resultMessage("It's a draw!")
             } else if (
                 (androChoice == "Rock" && playerChoice == "Scissors") ||
                 (androChoice == "Paper" && playerChoice == "Rock") ||
                 (androChoice == "Scissors" && playerChoice == "Paper")
             ) {
-                Toast.makeText(applicationContext, "You lose!", Toast.LENGTH_SHORT).show()
+                resultMessage("You lose!")
                 androScoreUp()
             } else {
-                Toast.makeText(applicationContext, "You win!", Toast.LENGTH_SHORT).show()
+                resultMessage("You win!")
                 playerScoreUp()
             }
         }
 
         //Main
         fun mainExecution(set: String) {
+            attemptsCountUp()
             setPlayerChoice(set)
             setAndroChoice()
             displayChoices()
             displayResult()
             displayScore()
+            displayAttemptsCount()
         }
 
         //Execution
