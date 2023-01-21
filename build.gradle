@@ -8,3 +8,12 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+def getVersionName() {
+    return android.defaultConfig.versionName
+}
+
+task printVersionName {
+    doLast {
+        println getVersionName()
+    }
+}
